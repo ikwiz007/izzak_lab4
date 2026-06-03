@@ -21,8 +21,7 @@ public class UtilityTest {
         correctAddresses.add(new Address("address1", "city1")); 
         correctAddresses.add(new Address("address2", "city1")); 
         correctAddresses.add(new Address("address3", "city1")); 
-        List<Address> testAddresses = utility.getAddressesByCity(city, "city 
-        1"); 
+        List<Address> testAddresses = utility.getAddressesByCity(city, "city1"); 
         for (int i = 0; i < testAddresses.size(); i++) { 
             assertEquals(testAddresses.get(i).address, 
             correctAddresses.get(i).address); 
