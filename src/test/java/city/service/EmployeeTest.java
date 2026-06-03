@@ -6,6 +6,6 @@ public class EmployeeTest {
     public void testCapitalize() { 
     Address stubAddress = new Address("address1", "city1"); 
     Employee employee = new Employee("bob", 1, 20000, stubAddress); 
-    assertEquals(employee.getCapitalizedName(), "Bob"); 
-} 
+    assertEquals(employee.getCapitalizedName(), "Bob"); }
+    
 } 
