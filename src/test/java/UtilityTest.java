@@ -6,6 +6,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals; 
 import static org.mockito.Mockito.mock; 
 import static org.mockito.Mockito.when; 
+import salary.service.Salary;
 public class UtilityTest { 
     @Test 
     public void getAddresses() { 
@@ -25,7 +26,7 @@ public class UtilityTest {
         for (int i = 0; i < testAddresses.size(); i++) { 
             assertEquals(testAddresses.get(i).address, 
             correctAddresses.get(i).address); 
-        } 
+        } }
     
     @Test 
     public void testSalaryFiltering() { 
@@ -47,4 +48,3 @@ public class UtilityTest {
         } 
     }  
   }
-}
