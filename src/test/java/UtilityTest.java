@@ -26,4 +26,25 @@ public class UtilityTest {
             assertEquals(testAddresses.get(i).address, 
             correctAddresses.get(i).address); 
         } 
-}}
+    
+    @Test 
+    public void testSalaryFiltering() { 
+        Salary salary = mock(Salary.class); 
+        List<Integer> mockedSalaries = new ArrayList<>(); 
+        mockedSalaries.add(10000); 
+        mockedSalaries.add(20000); 
+        mockedSalaries.add(30000); 
+        mockedSalaries.add(55000); 
+        mockedSalaries.add(60000); 
+        when(salary.returnSalaries()).thenReturn(mockedSalaries); 
+        Utility utility = new Utility(); 
+        List<Integer> correctSalaries = new ArrayList<>(); 
+        correctSalaries.add(55000); 
+        correctSalaries.add(60000); 
+        List<Integer> testSalaries = utility.getSalariesOver(salary, 50000); 
+        for (int i = 0; i < testSalaries.size(); i++) { 
+        assertEquals(testSalaries.get(i), correctSalaries.get(i)); 
+        } 
+    }  
+  }
+}
